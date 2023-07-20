@@ -12,7 +12,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
+      primary: {
+          50: '#f2fce9',
+          100: '#e3f8cf',
+          200: '#c7f2a4',
+          300: '#a2e86e',
+          400: '#81d942',
+          500: '#61bf23',
+          600: '#4a9a18',
+          700: '#397417',
+          800: '#305c18',
+          900: '#2b4e19',
+          950: '#132b08',
+        },
         secondary: colors.gray,
 
         provider: {
