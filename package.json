@@ -5,7 +5,8 @@
     "build": "tsc && vite build",
     "build:jar": "vite-node scripts/build",
     "dev": "vite build --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "yarn run build && yarn run build:jar && kubectl delete configmap keycloak-theme -n idp && kubectl create configmap keycloak-theme --from-file=out/keywind.jar -n idp"
   },
   "dependencies": {
     "alpinejs": "^3.12.0",

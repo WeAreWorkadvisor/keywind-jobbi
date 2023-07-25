@@ -3,6 +3,18 @@
     {
       "name": "keywind",
       "types": ["login"]
+    },
+    {
+      "name": "keywind_local",
+      "types": ["login", "email"]
+    },
+    {
+      "name": "keywind_staging",
+      "types": ["login", "email"]
+    },
+    {
+      "name": "keywind_prod",
+      "types": ["login", "email"]
     }
   ]
 }
