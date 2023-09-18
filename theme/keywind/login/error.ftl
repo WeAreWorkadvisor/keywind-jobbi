@@ -3,13 +3,13 @@
 <#import "components/atoms/link.ftl" as link>
 
 <@layout.registrationLayout displayMessage=false; section>
-  <#if section="header">
+  <#if section == "header">
     ${kcSanitize(msg("errorTitle"))?no_esc}
-  <#elseif section="form">
+  <#elseif section == "form">
     <@alert.kw color="error">${kcSanitize(message.summary)?no_esc}</@alert.kw>
     <#if !skipLink??>
       <#if client?? && client.baseUrl?has_content>
-        <@link.kw color="secondary" href="https://bedrift.jobbi.no/" size="small">
+        <@link.kw color="secondary" href="${msg('appUrl')}" size="small">
           ${kcSanitize(msg("backToApplication"))?no_esc}
         </@link.kw>
       </#if>
