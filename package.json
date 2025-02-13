@@ -5,7 +5,8 @@
     "build": "tsc && vite build",
     "build:jar": "vite-node scripts/build",
     "dev": "vite dev",
-    "test": "mvn test"
+    "test": "mvn test",
+    "apply": "yarn run build && yarn run build:jar && kubectl create configmap keycloak-theme --from-file=out/keywind.jar -n idp"
   },
   "dependencies": {
     "alpinejs": "^3.13.0",

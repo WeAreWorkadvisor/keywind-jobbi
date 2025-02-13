@@ -1,8 +1,9 @@
 import type { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors';
+import preset from './preset.js';
 
 export default {
   content: ['./theme/**/*.ftl'],
+  presets: [preset],
   experimental: {
     optimizeUniversalDefaults: true,
   },
@@ -10,8 +11,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
-        secondary: colors.gray,
+        primary: preset.theme.colors.first['4'],
+        secondary: preset.theme.colors.neutral['1'],
 
         provider: {
           apple: '#000000',
