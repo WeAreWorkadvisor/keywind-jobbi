@@ -3,6 +3,14 @@
     {
       "name": "keywind",
       "types": ["login"]
+    },
+    {
+      "name": "jobbi",
+      "types": ["login"]
+    },
+    {
+      "name": "jobbi-bedrift",
+      "types": ["login"]
     }
   ]
 }
