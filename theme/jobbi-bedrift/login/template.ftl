@@ -19,7 +19,9 @@
   showAnotherWayIfPresent=true
 >
   <#assign cardHeader>
-    <@mascott.kw />
+    <div class="flex justify-center w-full">
+      <@mascott.kw />
+    </div>
     <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
       <@heading.kw>
         <#nested "header">
