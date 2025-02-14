@@ -8,6 +8,9 @@ export default {
   plugins: [require('@tailwindcss/forms')],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Archivo', 'sans-serif'],
+      },
       colors: {
         primary: {
           200: '#F2E5FF',
