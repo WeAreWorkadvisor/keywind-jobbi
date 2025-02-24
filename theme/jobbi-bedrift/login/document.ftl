@@ -5,6 +5,11 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="preload" href="https://fonts.cdnfonts.com/css/archivo" as="style">
+  <link rel="preload" href="https://fonts.cdnfonts.com/s/15550/Archivo-Regular.woff" as="font" crossorigin>
+  <link rel="preload" href="https://fonts.cdnfonts.com/s/15550/Archivo-Medium.woff" as="font" crossorigin>
+  <link rel="preload" href="https://fonts.cdnfonts.com/s/15550/Archivo[wdth,wght].woff" as="font" crossorigin>
+
   <#if properties.meta?has_content>
     <#list properties.meta?split(" ") as meta>
       <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}">

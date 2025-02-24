@@ -5,7 +5,7 @@
 <#import "components/atoms/card.ftl" as card>
 <#import "components/atoms/container.ftl" as container>
 <#import "components/atoms/heading.ftl" as heading>
-<#import "components/atoms/logo.ftl" as logo>
+<#import "components/atoms/mascot.ftl" as mascott>
 <#import "components/atoms/nav.ftl" as nav>
 <#import "components/molecules/locale-provider.ftl" as localeProvider>
 <#import "components/molecules/username.ftl" as username>
@@ -19,9 +19,9 @@
   showAnotherWayIfPresent=true
 >
   <#assign cardHeader>
-    <@logo.kw>
-      ${kcSanitize(msg("loginTitleHtml", (realm.displayNameHtml!"")))?no_esc}
-    </@logo.kw>
+    <div class="flex justify-center w-full">
+      <@mascott.kw />
+    </div>
     <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
       <@heading.kw>
         <#nested "header">
@@ -82,3 +82,4 @@
     </@body.kw>
   </html>
 </#macro>
+
