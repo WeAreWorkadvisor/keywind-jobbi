@@ -7,7 +7,15 @@
   <#if section="header">
     ${msg("termsTitle")}
   <#elseif section="form">
-    ${kcSanitize(msg("termsText"))?no_esc}
+    <p>
+    ${kcSanitize(msg("termsText1"))?no_esc}
+    </p>
+    <p>
+    ${kcSanitize(msg("termsText2"))?no_esc}
+    </p>
+    <p>
+    ${kcSanitize(msg("termsText3"))?no_esc}
+    </p>
     <@form.kw action=url.loginAction method="post">
       <@buttonGroup.kw>
         <@button.kw color="primary" name="accept" type="submit">
