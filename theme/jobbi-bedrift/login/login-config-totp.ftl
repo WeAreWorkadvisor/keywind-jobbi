@@ -32,10 +32,8 @@
         <li>
           <p>${msg("loginTotpManualStep2")}</p>
           <p class="font-medium text-xl">${totp.totpSecretEncoded}</p>
-        </li>
-        <li>
           <@link.kw color="primary" href=totp.qrUrl>
-            ${msg("loginTotpScanBarcode")}
+          ${msg("loginTotpScanBarcode")}
           </@link.kw>
         </li>
         <li class="space-y-2">
@@ -65,7 +63,8 @@
         </li>
       </#if>
       <li>${msg("loginTotpStep3")}</li>
-      <li>${msg("loginTotpStep3DeviceName")}</li>
+
+      <#-- <li>${msg("loginTotpStep3DeviceName")}</li> -->
     </ol>
     <@form.kw action=url.loginAction method="post">
       <input name="totpSecret" type="hidden" value="${totp.totpSecret}">
@@ -82,15 +81,17 @@
         required=false
         type="text"
       />
-      <@input.kw
-        autocomplete="off"
-        invalid=messagesPerField.existsError("userLabel")
-        label=totpDeviceLabel
-        message=kcSanitize(messagesPerField.get("userLabel"))
-        name="userLabel"
-        required=false
-        type="text"
-      />
+      <#--
+        <@input.kw
+          autocomplete="off"
+          invalid=messagesPerField.existsError("userLabel")
+          label=totpDeviceLabel
+          message=kcSanitize(messagesPerField.get("userLabel"))
+          name="userLabel"
+          required=false
+          type="text"
+        />
+      -->
       <@buttonGroup.kw>
         <#if isAppInitiatedAction??>
           <@button.kw color="primary" type="submit">

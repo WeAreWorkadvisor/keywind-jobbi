@@ -2,9 +2,9 @@
 
 <#macro kw>
   <body>
-    <div class="fixed top-0 left-0 right-0 flex p-4">
+    <a class="fixed top-0 left-0 right-0 flex p-4 no-underline" href="https://bedrift.jobbi.no">
       <@logo.kw />
-    </div>
+    </a>
     <div class="bg-secondary-100 flex flex-col items-center justify-center min-h-screen sm:py-16 pt-32">
       <#nested>
     </div>

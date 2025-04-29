@@ -16,6 +16,9 @@
     <p>
     ${kcSanitize(msg("termsText3"))?no_esc}
     </p>
+    <a href="https://bedrift.jobbi.no/om/vilkår" target="_blank" class="underline mt-2" >
+      ${msg("goToTerms")}
+    </a>
     <@form.kw action=url.loginAction method="post">
       <@buttonGroup.kw>
         <@button.kw color="primary" name="accept" type="submit">
