@@ -8,17 +8,14 @@
     ${msg("termsTitle")}
   <#elseif section="form">
     <p>
-    ${kcSanitize(msg("termsText1"))?no_esc}
+      ${kcSanitize(msg("termsText1"))?no_esc}
     </p>
     <p>
-    ${kcSanitize(msg("termsText2"))?no_esc}
+      ${kcSanitize(msg("termsText2"))?no_esc}
     </p>
     <p>
-    ${kcSanitize(msg("termsText3"))?no_esc}
+      ${kcSanitize(msg("termsText3"))?no_esc}
     </p>
-    <a href="https://jobbi.no/om/vilkår" target="_blank" class="underline mt-2" >
-      ${msg("goToTerms")}
-    </a>
     <@form.kw action=url.loginAction method="post">
       <@buttonGroup.kw>
         <@button.kw color="primary" name="accept" type="submit">
